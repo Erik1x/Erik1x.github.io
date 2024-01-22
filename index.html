@@ -1,0 +1,155 @@
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Erik Echevarria</title>
+            <link rel="stylesheet" href="style.css">
+            <script src="https://kit.fontawesome.com/6749b5baac.js" crossorigin="anonymous"></script>
+          </head>
+          <body>
+            <div id="header">
+              <div class="container">
+                <nav>
+                  <img src="" class="logo">
+                  <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Goal</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                  </ul>
+                  <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                  <p>Computer Science</p>
+                  <h1><span>Erik</span><br>Echevarria</h1>
+                </div>
+              </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="about">
+              <div class="container">
+                <div class="row">
+                  <div class="about-col-1">
+                    <img src="images/uta.png" alt="User Image">
+                  </div>
+                  <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p><br>As an outgoing student attending UTA, I am enthusiastic about exploring new horizons and embracing opportunities that foster personal and professional growth. I am on a journey to continuously learn and acquire new skills, and gain experience in my field.<br></p>
+
+                    <div class="tab-titles">
+                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                        have worked on projects in languages like C++, Python, HTML, C, and Java
+                      </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                      <ul>
+                        "I'm passionate about Computer Science and actively seeking opportunities to gain hands-on experience in the field. While I'm in the early stages of my journey, I'm eager to apply my knowledge and contribute effectively to relevant projects.
+                      </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                      <ul><br>
+                        Tarrant County Community College 2018 - 2021<br>       
+                        University of Texas At Arlington 2022 - present
+                      
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Services Section -->
+            <div id="services">
+              <div class="container">
+                <h1 class="sub-title">My Goal</h1>
+                <div class="services-list">
+                  My goal in computer science is to leverage technology to create innovative solutions that make a positive impact on people's lives. I am passionate about tackling complex challenges, continuous learning, and contributing to advancements in the field. Ultimately, I aim to be a skilled and versatile professional, collaborating on projects that push the boundaries of what technology can achieve.
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div id="portfolio">
+              <div class="container">
+                <h1 class="sub-title">My Portfolio</h1>
+                <div class="work-list">
+                  I have had the opportunity to contribute to a few small projects, as outlined in my resume. One notable project is the Currency Conversion App, my most recent endeavor. In collaboration with my team, we integrated a Google API to provide daily currency updates and incorporated a Google login feature. For a more detailed explanation, please feel free to watch the video . I am proud of the experiences gained from these projects and look forward to bringing this knowledge to new challenges.<br><br>https://youtu.be/iiUFswmlYuA
+                </div>
+                <a href="#" class="btn">Learn More</a>
+              </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact">
+              <div class="container">
+                <div class="row">
+                  <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> echevarriaerik22@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 6825529722</p>
+                    <div class="social-icons">
+                      <!-- Add your social media links here -->
+                    </div>
+                    <a href="images/Resume.pdf" download class="btn btn2">Download Resume</a>
+                  </div>
+                  <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                      <input type="text" name="Name" placeholder="Name" required>
+                      <input type="email" name="email" placeholder="Your Email" required>
+                      <textarea name="message" placeholder="Your Message" required></textarea>
+                      <button type="submit" class="btn btn2">Send</button>
+                    </form>
+                    <span id="msg"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Copyright Section -->
+            <div class="copyright">
+              <p>&copy; 2024 Erik Echevarria. All Rights Reserved.</p>
+            </div>
+
+            <script>
+              var tablinks = document.getElementsByClassName("tab-links");
+              var tabcontents = document.getElementsByClassName("tab-contents");
+
+              function opentab(tabname) {
+                for (tablink of tablinks) {
+                  tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                  tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+              }
+
+              var sidemenu = document.getElementById("sidemenu");
+              function openmenu() {
+                sidemenu.style.right = "0";
+              }
+
+              function closemenu() {
+                sidemenu.style.right = "-200px";
+              }
+            </script>
+
+            <script>
+              // Your Google Sheets submission script here
+            </script>
+          </body>
+          </html>
